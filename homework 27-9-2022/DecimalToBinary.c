@@ -1,25 +1,21 @@
 #include <stdio.h>
+#include<stdlib.h>  
  
-int main()
-{
-  int x, y, k;
+void main()
+{  
+int arr[100];
+int x,i;    
  
-  printf("Enter an integer\n");
-  scanf("%d", &x);
+scanf("%d",&x);  
+int n= x;
  
-  printf("%d in binary :\n", x);
+for(i=0;x>0;i++)    
+{    
+arr[i] = x%2;    
+x = x/2;    
+}   
  
-  for (y = 31; y >= 0; y--)
-  {
-    k = x >> y;
- 
-    if (k & 1)
-      printf("1");
-    else
-      printf("0");
-  }
- 
-  printf("\n");
- 
-  return 0;
+printf("binary : ");
+for(i=i-1; i>=0; i--)    
+printf("%d", arr[i]);    
 }

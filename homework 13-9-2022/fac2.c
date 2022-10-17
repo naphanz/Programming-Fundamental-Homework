@@ -1,15 +1,23 @@
-#include<stdio.h>
-int main(){
-  int i=1,fac=1,num;
+#include <stdio.h> 
+#include <stdlib.h> 
  
-  printf("Enter a num: ");
-  scanf("%d",&num);
+int fac(int i) 
+{ 
+    if(i==0) 
+    { 
+        return 1; 
+    } 
+    else 
+    { 
+        return(fac(i-1)*i); 
+    } 
+} 
  
-  while(i<=num){
-      fac=fac*i;
-      i++;
-  }
- 
-  printf("Factorial of %d is: %d",num,fac);
-  return 0;
-}
+int main(void) 
+{ 
+    int i; 
+    printf("Enter a num: "); 
+    scanf("%d", &i); 
+    printf("Factorial is: %d.", fac(i)); 
+    return 0;
+} 
